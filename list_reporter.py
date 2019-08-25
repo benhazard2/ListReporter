@@ -20,4 +20,6 @@ def analyse_list(input_list):
     return result
 
 if __name__== "__main__":
-    print analyse_list(ast.literal_eval(sys.argv[1]))
+    if len(sys.argv) == 1:
+        sys.exit('Please supply a list that you would like to anaylse')
+    print(analyse_list(ast.literal_eval(sys.argv[1])))
